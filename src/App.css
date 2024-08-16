@@ -1,3 +1,4 @@
+/* Genellikle uygulanacak temel stiller */
 *,
 *::before,
 *::after {
@@ -108,24 +109,19 @@ input[type="checkbox"]:checked::before {
   padding-inline: 450px;
 }
 
-
-
-.createTodo{
+.createTodo {
   margin-inline: 450px;
-
 }
 
-.todos{
+.todos {
   margin-inline: 450px;
-
 }
 
-h1{
+h1 {
   color: white;
   line-height: 40px;
   font-weight: 400;
 }
-
 
 .hero {
   box-shadow: 0px 35px 50px -15px #C2C3D680;
@@ -248,24 +244,32 @@ h1{
   color: #9495A5;
 }
 
-@media (width < 768px) {
+/* Mobil Cihazlar için Stil Ayarları */
+@media (max-width: 768px) {
   body {
     background-image: url(/src/assets/img/mobileBGLight.png);
   }
 
   .container {
     margin: 0 auto;
-    width: 375px;
+    width: 90%; /* Mobilde tam genişlik için % ile ayarladık */
   }
 
   .createTodo {
     background-color: #fff;
-    padding: 14px 20px 14px 20px;
-    margin-top: -30px;
+    padding: 14px 20px;
+    margin-top: 0; /* Negatif margin kaldırıldı */
+    margin-inline: auto; /* Otomatik hizalama */
+  }
+
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-inline: 20px; /* Daha küçük bir padding ayarlandı */
   }
 
   .hero {
-    width: 327px;
+    width: 100%; /* Tam genişlik ayarlandı */
     margin: 0 auto;
   }
 
@@ -278,16 +282,12 @@ h1{
     color: #494C6B;
   }
 
-  .hero .interactive {
-    display: none;
-  }
-
   .interactiveDesktop {
-    display: none;
+    display: none; /* Mobilde gizleniyor */
   }
 
   .interactive {
-    display: block;
+    display: block; /* Mobilde görünür */
     margin-top: 16px;
     margin-bottom: 40px;
     padding-block: 15px;
@@ -318,4 +318,13 @@ h1{
   .completedStatus button:hover {
     border: 1px solid transparent;
   }
+
+  
+.createTodo {
+  margin-inline: 0px;
+}
+
+.todos {
+  margin-inline: 0px;
+}
 }
