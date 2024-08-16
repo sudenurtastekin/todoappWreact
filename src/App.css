@@ -105,7 +105,27 @@ input[type="checkbox"]:checked::before {
   justify-content: space-between;
   padding-top: 70px;
   padding-bottom: 40px;
+  padding-inline: 450px;
 }
+
+
+
+.createTodo{
+  margin-inline: 450px;
+
+}
+
+.todos{
+  margin-inline: 450px;
+
+}
+
+h1{
+  color: white;
+  line-height: 40px;
+  font-weight: 400;
+}
+
 
 .hero {
   box-shadow: 0px 35px 50px -15px #C2C3D680;
