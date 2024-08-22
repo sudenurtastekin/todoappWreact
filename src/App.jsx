@@ -33,10 +33,11 @@ function App() {
     const updatedTodos = todos.filter((_, i) => i !== index);
     setTodos(updatedTodos);
   };
-
-  const clearCompleted = () => {
-    const incompleteTodos = todos.filter(todo => !todo.completed);
-    setTodos(incompleteTodos);
+  
+const clearCompleted = () => {
+  const incompleteTodos = todos.filter(todo => !todo.completed);
+  setTodos(incompleteTodos);
+  console.log(incompleteTodos);
   };
 
   const filteredTodos = todos.filter(todo => {
